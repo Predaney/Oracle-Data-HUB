@@ -67,7 +67,7 @@ app.post('/api/paystack/webhook', express.raw({ type: '*/*', limit: '100kb' }), 
 /* ---------- admin + api + static site ---------- */
 app.use('/admin', adminRouter);
 app.use('/api', express.json({ limit: '10kb' }), rateLimit({ windowMs: 60 * 1000, max: 120, standardHeaders: true, legacyHeaders: false }), api);
-aapp.use(express.static(path.join(__dirname, 'public'), { extensions: ['html'] }));
+app.use(express.static(path.join(__dirname, '..', 'public'), { extensions: ['html'] }));
 
 app.use('/api', (req, res) => res.status(404).json({ error: 'Not found' }));
 app.use((err, req, res, next) => {
