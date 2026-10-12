@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle's Data Hub | Data Bundles, Result Checkers &amp; More</title>
+    <meta name="description" content="Buy MTN, Telecel and AirtelTigo data bundles, WAEC result checkers, university forms and more. Secure payment with Paystack.">
+    <link rel="stylesheet" href="/style.css?v=3">
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+
+<body>
+
+    <div id="test-banner" class="test-banner" hidden>
+        TEST MODE: no real money is charged. Test card 4084 0840 8408 4081, any future expiry, CVV 408.
+    </div>
+
+    <header class="header">
+        <div class="wrap header-in">
+            <a class="brand" href="#top"><span class="logo">O</span><span>Oracle's Data Hub</span></a>
+            <nav class="nav" aria-label="Main">
+                <a href="#bundles">Data Bundles</a>
+                <a href="#services">Services</a>
+                <a href="#how">How it works</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                <a href="/track.html">Track order</a>
+            </nav>
+            <div class="tools">
+                <button class="chip" id="btn-verify">Verify</button>
+                <button class="chip" id="btn-track">Track</button>
+                <button class="chip" id="btn-share">Share</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="wrap">
+                <p class="eyebrow">Trusted digital services in Ghana</p>
+                <h1>Data bundles and digital services, <span class="grad">paid for securely.</span></h1>
+                <p class="lead">Buy MTN, Telecel and AirtelTigo data, WAEC result checkers, university forms and more. Clear prices, secure Paystack checkout and real human support.</p>
+                <div class="cta">
+                    <a class="btn primary" href="#bundles">Buy data now</a>
+                    <a class="btn ghost" href="#services">Other services</a>
+                </div>
+                <ul class="trust">
+                    <li><b>Secure checkout</b><span>Powered by Paystack</span></li>
+                    <li><b>Verified payments</b><span>Confirmed by our server</span></li>
+                    <li><b>Fixed prices</b><span>No hidden charges</span></li>
+                    <li><b>Human support</b><span>Call or WhatsApp us</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="block" id="bundles">
+            <div class="wrap">
+                <h2>Data bundles</h2>
+                <p class="sub">Choose your network, pick a bundle and pay in under a minute.</p>
+                <div class="tabs" role="tablist">
+                    <button class="network-btn" data-target="mtn-section">MTN</button>
+                    <button class="network-btn" data-target="telecel-section">Telecel</button>
+                    <button class="network-btn" data-target="tigo-section">AirtelTigo</button>
+                    <button class="network-btn" data-target="alpha-section">AirtelTigo iShare</button>
+                </div>
+
+                <div class="section" id="mtn-section"></div>
+                <div class="section" id="telecel-section"></div>
+                <div class="section" id="tigo-section"></div>
+                <div class="section" id="alpha-section">
+                    <div class="product-card form-card">
+                        <h3>AirtelTigo iShare Registration</h3>
+                        <p class="muted">Fill in your details below. The fee is GHS 15.00.</p>
+                        <input class="field" type="text" id="alpha-name" placeholder="Full name" autocomplete="name">
+                        <input class="field" type="text" id="alpha-card" placeholder="Ghana Card number">
+                        <input class="field" type="text" id="alpha-location" placeholder="Where you stay">
+                        <input class="field" type="text" id="alpha-work" placeholder="Work you do">
+                        <input class="field" type="tel" id="alpha-phone" placeholder="Phone number (0XXXXXXXXX)" autocomplete="tel">
+                        <input class="field" type="email" id="alpha-email" placeholder="Email address" autocomplete="email">
+                        <input class="field" type="text" id="alpha-amount" value="₵15" readonly aria-label="Amount">
+                        <p class="muted small">Your Ghana Card number is only included in the WhatsApp message to us. It is never sent to our server or to Paystack.</p>
+                        <div class="modal-error" id="alpha-error" role="alert"></div>
+                        <button class="buy-btn" id="alpha-buy">Register &amp; Pay</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block alt" id="services">
+            <div class="wrap">
+                <h2>Other services</h2>
+                <p class="sub">University forms, exam checkers, voice bundles and more.</p>
+                <div class="grid3">
+                    <article class="card">
+                        <div class="icon">🎓</div>
+                        <h3>University Admission Forms</h3>
+                        <p>Apply to top universities (UG, KNUST, AAMUSTED and more) for 2026/2027. E-voucher price about GH₵200 to 250.</p>
+                        <button class="buy-btn" data-product="univ-form">Buy now</button>
+                    </article>
+                    <article class="card">
+                        <div class="icon">📄</div>
+                        <h3>WASSCE / BECE Result Checker</h3>
+                        <p>Official WAEC checker PIN for WASSCE/NOV-DEC or BECE results. GH₵30 per checker.</p>
+                        <button class="buy-btn" data-product="result-checker">Buy now</button>
+                    </article>
+                    <article class="card">
+                        <div class="icon">📞</div>
+                        <h3>Alpha Voice Bundle</h3>
+                        <p>Register for discounted voice calls on AirtelTigo (Alpha style). Quick and simple registration.</p>
+                        <button class="buy-btn" data-product="voice-bundle">Register now</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="block" id="how">
+            <div class="wrap">
+                <h2>How it works</h2>
+                <p class="sub">Four simple steps from choosing to receiving.</p>
+                <ol class="steps">
+                    <li><b>1</b>
+                        <h3>Choose</h3>
+                        <p>Pick a network and bundle, or a service.</p>
+                    </li>
+                    <li><b>2</b>
+                        <h3>Enter details</h3>
+                        <p>Add the phone number that should receive it and your email.</p>
+                    </li>
+                    <li><b>3</b>
+                        <h3>Pay securely</h3>
+                        <p>Pay on Paystack's secure checkout. We confirm it with Paystack directly.</p>
+                    </li>
+                    <li><b>4</b>
+                        <h3>Send your order</h3>
+                        <p>Tap the WhatsApp button to send your order details. We deliver once payment is confirmed.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="block alt" id="faq">
+            <div class="wrap narrow">
+                <h2>Frequently asked questions</h2>
+                <details>
+                    <summary>How do I pay?</summary>
+                    <p>Choose a product, enter your phone number and email, then pay on the Paystack checkout. It shows the payment options available to you.</p>
+                </details>
+                <details>
+                    <summary>What happens after I pay?</summary>
+                    <p>We confirm your payment with Paystack, then you will see a confirmation with your reference. Tap "Send order on WhatsApp" so we get your details and deliver.</p>
+                </details>
+                <details>
+                    <summary>I paid but did not see the confirmation. What should I do?</summary>
+                    <p>Do not pay again. Tap "Verify" at the top, send us your payment reference on WhatsApp and we will check it.</p>
+                </details>
+                <details>
+                    <summary>Can I track my order?</summary>
+                    <p>Yes. Tap "Track" at the top and message us your reference on WhatsApp.</p>
+                </details>
+                <details>
+                    <summary>Is my information safe?</summary>
+                    <p>Payments are handled by Paystack and prices are set on our server, so they cannot be changed from your browser. Your Ghana Card number, if needed, goes only into the WhatsApp message to us.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="block" id="contact">
+            <div class="wrap">
+                <h2>Contact &amp; support</h2>
+                <p class="sub">We are here to help. Reach out any time.</p>
+                <div class="contact">
+                    <a class="btn wa" id="wa-chat" href="#" target="_blank" rel="noopener">WhatsApp: 0554304847</a>
+                    <a class="btn ghost" href="tel:0554304847">Call: 0554304847</a>
+                    <a class="btn primary" id="wa-group" href="#" target="_blank" rel="noopener" hidden>Join our WhatsApp group</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="brand"><span class="logo">O</span><span>Oracle's Data Hub</span></div>
+            <p class="muted small">Data bundles, result checkers and digital services. Payments by Paystack.</p>
+            <p class="muted small">© Oracle's Data Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Purchase modal -->
+    <div id="newPurchaseModal" class="new-purchase-modal" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+        <div class="new-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="pm-title">Confirm purchase</h2>
+                <button class="close-x" id="pm-close" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-row">
+                    <div class="detail-label">Service</div>
+                    <div class="detail-value" id="new-modal-service"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Description</div>
+                    <div class="detail-value" id="new-modal-desc"></div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-label">Price</div>
+                    <div class="detail-value" id="new-modal-price"></div>
+                </div>
+                <div class="input-section-title">Phone number to receive it</div>
+                <input type="tel" id="new-modal-phone" class="modal-input" placeholder="0XXXXXXXXX" autocomplete="tel">
+                <div class="input-section-title">Email address</div>
+                <input type="email" id="new-modal-email" class="modal-input" placeholder="you@example.com" autocomplete="email">
+                <div class="modal-error" id="pm-error" role="alert"></div>
+                <div class="test-hint" id="pm-test-hint" hidden>Test mode: use card 4084 0840 8408 4081, any future expiry, CVV 408. No real money moves.</div>
+                <div class="modal-buttons">
+                    <button class="modal-btn btn-cancel" id="new-cancel">Cancel</button>
+                    <button class="modal-btn btn-purchase" id="new-confirm">Pay now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment result modal -->
+    <div id="successModal" class="new-purchase-modal" role="dialog" aria-modal="true" aria-labelledby="ok-title">
+        <div class="new-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="ok-title">Confirming payment…</h2>
+                <button class="close-x" id="ok-close" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="ok-text" class="ok-text"></p>
+                <div class="ok-ref" id="ok-ref"></div>
+                <p id="ok-note" class="muted" hidden>Tap the button below to send your order details to us on WhatsApp. We deliver once we confirm the payment.</p>
+                <div class="modal-buttons">
+                    <a class="modal-btn btn-purchase" id="ok-wa" href="#" target="_blank" rel="noopener" hidden>Send order on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+
+</html>

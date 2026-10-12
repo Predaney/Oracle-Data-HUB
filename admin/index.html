@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orders · Oracle's Data Hub</title>
+<style>
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0e14;color:#e0e0e0;margin:0;padding:20px}
+h1{margin:0 0 12px;font-size:22px}
+.bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+button{background:#008cff;color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:600;cursor:pointer}
+button.ghost{background:#2a323c}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:14px}
+th,td{white-space:pre-line;padding:8px 10px;border-bottom:1px solid #252b35;text-align:left;vertical-align:top}
+th{color:#9aa4b2;font-weight:600}
+.paid{color:#00ffaa}.pending{color:#ffb100}.failed{color:#ff6b6b}
+.mono{font-family:Consolas,monospace;font-size:12px}
+</style></head>
+<body>
+<h1>Orders</h1>
+<div class="bar">
+  <label><input type="checkbox" id="onlyPaid" checked> Paid only</label>
+  <label><input type="checkbox" id="onlyOpen"> Not yet delivered</label>
+  <button id="refresh" class="ghost">Refresh</button>
+  <span id="count"></span>
+</div>
+<div class="wrap"><table>
+  <thead><tr><th>Time (UTC)</th><th>Reference</th><th>Order</th><th>Amount</th><th>Phone</th><th>Email</th><th>Details</th><th>Status</th><th>Delivered</th></tr></thead>
+  <tbody id="rows"></tbody>
+</table></div>
+<script src="admin.js"></script>
+</body></html>
